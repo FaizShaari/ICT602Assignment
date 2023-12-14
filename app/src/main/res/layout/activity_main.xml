@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E3B448"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/logo"
+                />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold2Zakat"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="75dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/calculator" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aladin"
+            android:text="Zakat Calculator for Gold Keeping"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#009688"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="470dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-25dp"
+            app:cardBackgroundColor="#A19D6E"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.723">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/gold" />
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text=" Input Weight of Gold "
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/gold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/goldWeight"
+                style="@android:style/Widget.Material.AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginTop="70dp"
+                android:ems="10"
+                android:hint="Gold Weight (gram)"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/type" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:fontFamily="monospace"
+                    android:text=" Choose Type of Gold "
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/type" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/groupType"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/type_keep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginRight="65dp"
+                    android:text="Keep"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/type_wear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Wear"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="250dp">
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/currentvalue" />
+
+                <TextView
+                    android:id="@+id/tv_currentValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text=" Current Gold Value/Gram "
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/currentvalue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/current_value"
+                    android:layout_width="294dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="280dp"
+                    android:ems="10"
+                    android:hint="Current Value (RM)"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+
+                <ImageButton
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="290dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/price"
+                    android:backgroundTint="#A19D6E"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="17dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="360dp">
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="227dp"
+                    android:layout_height="76dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#009688"
+                    android:gravity="left|center_vertical"
+                    android:text="Calculate Now !"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black"
+                    tools:ignore="RtlCompat" />
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="130dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#E91E63"
+                    android:text="Clear All"
+                    android:textColor="@color/black"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/output1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#3A6B35"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/output2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#3A6B35"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/output3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#3A6B35"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>
